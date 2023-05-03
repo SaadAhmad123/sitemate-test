@@ -4,6 +4,7 @@ import { IssueCreate, IssueDelete, IssueGet, IssueList, IssueUpdate } from './sr
 
 const defaultPort = 3000
 const app = express()
+app.use(express.json())
 
 app.post("/issues", IssueCreate)
 app.get("/issues", IssueList)

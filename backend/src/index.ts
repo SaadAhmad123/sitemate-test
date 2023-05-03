@@ -7,7 +7,8 @@ const dataStore = new LocalDataStore<Issue>()
 
 // endpoint POST /issues
 export const IssueCreate = (req: Request, res: Response) => {
-    const { title, description } = req.body;
+    console.log({ body: req.body })
+    const { title, description } = req.body || {};
     const newIssue: Issue = { id: uuidv4(), title, description };
     dataStore.create(newIssue)
     res.status(201).json(newIssue);
