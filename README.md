@@ -28,3 +28,8 @@ yarn client update --id <the record id> --title Saad12343 --description Ahmad132
 // Get Delete issue
 yarn client delete --id <the record id> --port <Check the port int the backend app, by default it is 3000>
 ```
+
+
+Improvement:
+
+- Add field validation in the API 
